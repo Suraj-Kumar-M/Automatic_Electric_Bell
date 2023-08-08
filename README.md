@@ -157,7 +157,6 @@ int readNumericInput()
     }
   }
 }
-
 int chooseTimeFormat() 
 {
   Serial.println("Choose time format");
@@ -169,7 +168,6 @@ int chooseTimeFormat()
   lcd.print("Hr:1 , Min:2");
   while (1) {
     char key = keypad.getKey();
-    
     if (key == '1') 
     {
       Serial.println("Enter new value");
@@ -442,7 +440,6 @@ void loop()
             while (1) 
             {
               char key = keypad.getKey();
-  
               if((key=='1')||(key=='2')) 
               {
                 Serial.println("Enter new value");
@@ -455,7 +452,6 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0100 : 0x0109, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
@@ -479,25 +475,21 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if((key=='1')||(key=='2')) 
               {
                 Serial.println("Enter new value");
                 lcd.clear();
                 lcd.print("Enter new value");
                 int value = readNumericInput();
-    
                 Serial.print("Value entered: ");
                 Serial.println(value);
                 lcd.clear();
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0101 : 0x010A, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
@@ -521,11 +513,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2')) 
               {
                 Serial.println("Enter new value");
@@ -538,7 +528,6 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0102 : 0x010B, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
@@ -546,7 +535,6 @@ void loop()
                 int readValue = EEPROM.read(key == '1' ? 0x0102 : 0x010B);
                 Serial.println(readValue);
                 lcd.print(readValue);
-                
               } 
               if (key == '#') 
               {
@@ -563,11 +551,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))  
               {
                 Serial.println("Enter new value");
@@ -580,7 +566,6 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-
                 EEPROM.write(key == '1' ? 0x0103 : 0x010C, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
@@ -604,11 +589,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))  
               {
                 Serial.println("Enter new value");
@@ -621,7 +604,6 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0104 : 0x010D, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
@@ -645,11 +627,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))  
               {
                 Serial.println("Enter new value");
@@ -662,7 +642,6 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0105 : 0x010E, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
@@ -686,11 +665,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))  
               {
                 Serial.println("Enter new value");
@@ -703,7 +680,6 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0106 : 0x010F, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
@@ -711,14 +687,12 @@ void loop()
                 int readValue = EEPROM.read(key == '1' ? 0x0106 : 0x010F);
                 Serial.println(readValue);
                 lcd.print(readValue);
-                
               } 
               if (key == '#') 
               {
                 lcd.clear();
                 return;
-              }
-              
+              } 
             }
           }
           else if (key == '8') 
@@ -729,11 +703,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))  
               {
                 Serial.println("Enter new value");
@@ -746,22 +718,19 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0107 : 0x0110, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
                 lcd.print("Value written:");
                 int readValue = EEPROM.read(key == '1' ? 0x0107 : 0x0110);
                 Serial.println(readValue);
-                lcd.print(readValue);
-                
+                lcd.print(readValue);   
               } 
               if (key == '#') 
               {
                 lcd.clear();
                 return;
               }
-              
             }
           }
           else if (key == '9') 
@@ -772,11 +741,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-
               if (key == '1' || key == '2') 
               {
                 Serial.println("Enter new value");
@@ -789,7 +756,6 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0108 : 0x0111, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
@@ -805,7 +771,6 @@ void loop()
               }              
             }   
           }
-          
         }
       }
       if (key=='2')
@@ -820,7 +785,6 @@ void loop()
         while (1) 
         {
           char key = keypad.getKey();
-      
           if (key == '1') 
           {
             Serial.println("Choose time format\nHr:1 , Min:2");
@@ -829,11 +793,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if (key == '1' || key == '2') 
               { 
                 Serial.println("Enter new value");
@@ -846,16 +808,13 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0112 : 0x011B, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
                 lcd.print("Value written:");
                 int readValue = EEPROM.read(key == '1' ? 0x0112 : 0x011B);
                 Serial.println(readValue);
-                lcd.print(readValue);
-                
-                
+                lcd.print(readValue); 
               } 
               if (key == '#') 
               {
@@ -872,11 +831,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))  
               {
                 Serial.println("Enter new value");
@@ -889,23 +846,19 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0113 : 0x011C, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
                 lcd.print("Value written:");
                 int readValue = EEPROM.read(key == '1' ? 0x0113 : 0x011C);
                 Serial.println(readValue);
-                lcd.print(readValue);
-                
-                
+                lcd.print(readValue);  
               } 
               if (key == '#') 
               {
                 lcd.clear();
                 return;
               }
-              
             }
           }
           else if (key == '3') 
@@ -916,11 +869,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2')) 
               {
                 Serial.println("Enter new value");
@@ -933,23 +884,19 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-
                 EEPROM.write(key == '1' ? 0x0114 : 0x011D, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
                 lcd.print("Value written:");
                 int readValue = EEPROM.read(key == '1' ? 0x0114 : 0x011D);
                 Serial.println(readValue);
-                lcd.print(readValue);
-                
-                
+                lcd.print(readValue);  
               } 
               if (key == '#') 
               {
                 lcd.clear();
                 return;
-              }
-              
+              } 
             }
           }
           else if (key == '4') 
@@ -960,11 +907,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))  
               {
                 Serial.println("Enter new value");
@@ -977,23 +922,19 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0115 : 0x011E, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
                 lcd.print("Value written:");
                 int readValue = EEPROM.read(key == '1' ? 0x0115 : 0x011E);
                 Serial.println(readValue);
-                lcd.print(readValue);
-                
-                
+                lcd.print(readValue);  
               } 
               if (key == '#') 
               {
                 lcd.clear();
                 return;
-              }
-              
+              }   
             }
           }
           else if (key == '5') 
@@ -1004,41 +945,34 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))  
               {
                 Serial.println("Enter new value");
                 lcd.clear();
                 lcd.print("Enter new value");
                 int value = readNumericInput();
-    
                 Serial.print("Value entered: ");
                 Serial.println(value);
                 lcd.clear();
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0116 : 0x011F, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
                 lcd.print("Value written:");
                 int readValue = EEPROM.read(key == '1' ? 0x0116 : 0x011F);
                 Serial.println(readValue);
-                lcd.print(readValue);
-                
-                
+                lcd.print(readValue);   
               } 
               if (key == '#') 
               {
                 lcd.clear();
                 return;
-              }
-              
+              } 
             }
           }
           else if (key == '6') 
@@ -1049,11 +983,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))
               {
                 Serial.println("Enter new value");
@@ -1066,23 +998,19 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0117 : 0x1000, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
                 lcd.print("Value written:");
                 int readValue = EEPROM.read(key == '1' ? 0x0117 : 0x1000);    
                 Serial.println(readValue);
-                lcd.print(readValue);
-                
-                
+                lcd.print(readValue);   
               } 
               if (key == '#') 
               {
                 lcd.clear();
                 return;
-              }
-              
+              }  
             }
           }
           else if (key == '7') 
@@ -1093,11 +1021,9 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             { 
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))  
               { 
                 Serial.println("Enter new value");
@@ -1110,23 +1036,19 @@ void loop()
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0118 : 0x1001, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
                 lcd.print("Value written:");
                 int readValue = EEPROM.read(key == '1' ? 0x0118 : 0x1001);    
                 Serial.println(readValue);
-                lcd.print(readValue);
-                
-                
+                lcd.print(readValue);    
               } 
               if (key == '#') 
               {
                 lcd.clear();
                 return;
-              }
-              
+              }  
             }
           }
           else if (key == '8') 
@@ -1137,34 +1059,28 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
              char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))  
               {
                 Serial.println("Enter new value");
                 lcd.clear();
                 lcd.print("Enter new value");
                 int value = readNumericInput();
-    
                 Serial.print("Value entered: ");
                 Serial.println(value);
                 lcd.clear();
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x0119 : 0x1002, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
                 lcd.print("Value written:");
                 int readValue = EEPROM.read(key == '1' ? 0x0119 : 0x1002); 
                 Serial.println(readValue);
-                lcd.print(readValue);
-                
-                
+                lcd.print(readValue);  
               } 
               if (key == '#') 
               {
@@ -1181,25 +1097,21 @@ void loop()
             lcd.print("Choose time format");
             lcd.setCursor(0, 1);
             lcd.print("Hr:1 , Min:2");
-
             while (1) 
             {
               char key = keypad.getKey();
-  
               if ((key == '1')||(key == '2'))  
               {
                 Serial.println("Enter new value");
                 lcd.clear();
                 lcd.print("Enter new value");
                 int value = readNumericInput();
-    
                 Serial.print("Value entered: ");
                 Serial.println(value);
                 lcd.clear();
                 lcd.setCursor(0, 0);
                 lcd.print("Value entered:");
                 lcd.print(value);
-    
                 EEPROM.write(key == '1' ? 0x011A : 0x1003, value);
                 Serial.print("Value written: ");
                 lcd.setCursor(0, 1);
